@@ -4,7 +4,7 @@
 
 Börja med att öppna MAMP. Tryck på **+** för att skapa ett nytt projekt.
 
-<img src="../1.jpg" style="zoom:50%;" />
+<img src="..assets/1.jpg" style="zoom:50%;" />
 
 **2**
 
@@ -98,7 +98,7 @@ http://mywordpress-site:8888/2021/10/12/why-the-jerome-gambit-is-unbeatable/
 
 Låt oss ändra på detta. Gå tillbaks till **admin**.
 
-![15](../assets/16.png)
+![15](/../assets/16.png)
 
 Ändra till **Post Name**. **Save Changes** och vi ska nu ha oss en 
 
