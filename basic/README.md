@@ -4,13 +4,13 @@
 
 Börja med att öppna MAMP. Tryck på **+** för att skapa ett nytt projekt.
 
-<img src="..assets/1.jpg" style="zoom:50%;" />
+<img src="./assets/1.jpg" style="zoom:50%;" />
 
 **2**
 
 Välj **WordPress** som "Host Type"
 
-<img src="/Users/alex/Desktop/WORDPRESS/basic/assets/2.png" alt="2" style="zoom:50%;" />
+<img src="./assets/2.png" alt="2" style="zoom:50%;" />
 
 **3**
 
