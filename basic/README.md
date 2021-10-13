@@ -100,7 +100,7 @@ Låt oss ändra på detta. Gå tillbaks till **admin**.
 
 <img src="./assets/16.png" alt="16" style="zoom:35%;" />
 
-Ändra till **Post Name**. **Save Changes** och vi ska nu ha oss en 
+Ändra till **Post Name**. **Save Changes** och vi ska nu ha oss en go **url**.
 
 
 
