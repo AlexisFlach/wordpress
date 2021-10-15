@@ -14,6 +14,20 @@ En stor fördel, som vi kommer att se när vi arbetar med WordPress, är att PHP
 
 En användare skickar en requst, säg till index.php. Server processar requesten och använder sig då av en PHP Interpretor. Medans PHP:n processas kan den arbeta med en Databas. Därefter skickas responsen tillbaka. Responsen innehåller dock inte PHP, utan resultat av processandet, vilket brukar vara HTML.
 
+###### Installation
+
+https://www.php.net/manual/en/install.php
+
+#### Generella regler
+
+PHP andvänder semikolon för att separera statements
+
+```
+echo "Hello World";
+```
+
+
+
 #### Comments
 
 ```
@@ -32,6 +46,8 @@ Comments
 
 ###### Variablar
 
+Variabelnamn börjar alltid med ett dollartecken. 
+
 ```
 <?php
 
@@ -41,10 +57,7 @@ $isMale = true;
 $height = 1.85;
 $salary = null;
 
-echo is_string($name);
-echo is_int($age);
 is_bool($isMale);
-
 isset($name);
 
 const PI = 3.14;
@@ -61,15 +74,15 @@ $c = 1.2;
 
 $a += $b;
 
+if(is_int($a)) {
+    echo "$a is an int\n";
+}
 
 $strNumber = '12.34';
 $number = (int)$strNumber;
 
-echo floor(2.6).'<br>';
-
 $num = 123456789.12345;
-
-echo number_format($num, 2, '.', ' ');
+number_format($num, 2, '.', ' ');
 ```
 
 ###### Strings
@@ -85,33 +98,15 @@ echo $string.'<br>';
 $string = 'Hello '.$name.'. How are you?';
 $string2 = "Hello I am $name. I am good";
 
-echo $string.'<br>';
-echo $string2.'<br>';
+if(is_string($string)) {
+    echo "$string is a string\n".'<br>';
+}
 
+echo strlen($string).'<br>';
+echo strtolower($string2).'<br>';
 
-echo 'Hello  '.' World'.' '.'<br>';
-
-strlen($string).'<br>';
-strtolower($string2).'<br>';
-$string2 = str_replace("Alex", "Berit", $string2);
+$string2 = str_replace("Alex", "Alexito", $string2);
 echo strtoupper($string2).'<br>';
-
-$poem = "
-This is
-a 
-pome
-";
-
-echo $poem;
-echo nl2br($poem);
-
-$poem2 = "
-This is
-<b>a</b> 
-pome
-";
-
-echo nl2br(htmlentities($poem2));
 ```
 
 ###### Arrays
@@ -120,84 +115,32 @@ echo nl2br(htmlentities($poem2));
 <?php
 
 $fruits = ["Banana", "Apple", "Orange"];
-
-echo $fruits[0].'<br>';
-
 $fruits[0] = "Peach";
 
-echo isset($fruits[0]);
-
 $fruits[] = "Banana";
-
-echo count($fruits).'<br>';
 
 array_push($fruits, "foo");
 array_pop($fruits);
 array_unshift($fruits, "bar");
 
+echo count($fruits).'<br>';
+
+sort($fruits);
+
+foreach ($fruits as $fruit) {
+    echo $fruit.'<br>';
+}
+
 # array_shift($fruits);
-
-echo '<pre>';
-var_dump($fruits);
-echo '</pre>';
-
-$string = "Banana,Apple,Peach";
-
-echo '<pre>';
-var_dump(explode(",", $string));
-echo '</pre>';
-
-// implode("&", $fruits);
-
-echo in_array("Apple", $fruits).'<br>';
-
-echo array_search("Apple", $fruits);
-
-$arr1 = [1,2,3];
-$arr2 = [4,5,6];
-
-$combinedArrays = array_merge($arr1, $arr2);
-$combinedArrays2 = [...$arr1, ...$arr2];
-echo '<pre>';
-var_dump($combinedArrays2);
-echo '</pre>';
 
 $person = [
     'name' => 'Alex',
-    'hobbies' => ['Tennis', 'Chess']
+    'hobbies' => 'Tennis'
 ];
 
-echo $person[name];
-
-// if(!isset($person['address'])) {
-//    $person['address'] = 'Unknown';
-// }
-
-$person['address'] ??= 'Unknown';
-
-echo '<pre>';
-print_r($person);
-echo '</pre>';
-
-echo '<pre>';
-var_dump(array_keys($person));
-echo '</pre>';
-
-echo '<pre>';
-var_dump(array_values($person));
-echo '</pre>';
-
-ksort($person);
-asort($person);
-
-$todos = [
-    ['title' => "Todo 1", "Completed" => true],
-    ['title' => "Todo 2", "Completed" => true],
-];
-
-echo '<pre>';
-var_dump($todos);
-echo '</pre>';
+foreach ($person as $me => $hobby) {
+    echo "$me: $hobby".'<br>';
+}
 ```
 
 ###### Conditionals
@@ -213,10 +156,6 @@ if($age == 20) echo "1".'<br>';
 echo $age < 22 ? 'yes' : 'no';
 
 $myAge = $age ?: '18';
-echo '<br>';
-echo $myAge;
-echo '<br>';
-// null coalescing operator
 
 $myName = isset($name) ? $name : 'John';
 
@@ -224,7 +163,7 @@ $myName = $name ?? 'John';
 
 // Switch
 
-$userRole = 'userss';
+$userRole = 'users';
 
 switch ($userRole) {
     case 'admin':
@@ -394,5 +333,15 @@ class Student extends Person {
 }
 ```
 
+#### PHP med WordPress
 
+```
+<?php
+while(have_posts()) {
+	the_post(); ?>
+	<h2><?php the_title(); ?></h2>
+	<p><?php the_content(); ?></p>
+	<a href="<?php the_permalink()?>"</a>>
+}
+```
 

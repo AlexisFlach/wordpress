@@ -20,7 +20,9 @@ array_unshift($fruits, "bar");
 
 # array_shift($fruits);
 echo '<pre>';
-var_dump($fruits);
+foreach ($fruits as $fruit) {
+    echo $fruit.'<br>';
+}
 echo '</pre>';
 
 $string = "Banana,Apple,Peach";
@@ -46,9 +48,12 @@ echo '</pre>';
 
 $person = [
     'name' => 'Alex',
-    'hobbies' => ['Tennis', 'Chess']
+    'hobby' => 'Tennis'
 ];
 
+foreach ($person as $me => $hobby) {
+    echo "$me: $hobby".'<br>';
+}
 echo $person[name];
 
 // if(!isset($person['address'])) {

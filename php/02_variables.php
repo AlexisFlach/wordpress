@@ -7,10 +7,6 @@ $height = 1.85;
 $salary = null;
 
 echo $name.'<br>';
-echo $age.'<br>';
-
-echo $isMale.'<br>';
-
 echo gettype($name).'<br>';
 
 var_dump($name);
