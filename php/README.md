@@ -1,5 +1,9 @@
 ### Grundläggande PHP
 
+Ni finner github-repo, med mer kod, för denna sektion på:
+
+https://github.com/AlexisFlach/wordpress/tree/main/php
+
 PHP står för **PHP: Hypertext Preprocessor** och är ett **Server-side Programming/Scripting Language**. 
 
 En stor fördel, som vi kommer att se när vi arbetar med WordPress, är att PHP kan bäddas in direkt i HTML.

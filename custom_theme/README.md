@@ -1,5 +1,11 @@
 ### Skapa ett eget WordPress-tema
 
+Ni finner repot på:
+
+https://github.com/AlexisFlach/wordpress/tree/main/custom_theme
+
+###### Användbara länker
+
 https://codex.wordpress.org/Theme_Development
 
 https://yoast.com/wordpress-theme-anatomy/

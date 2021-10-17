@@ -102,9 +102,81 @@ Låt oss ändra på detta. Gå tillbaks till **admin**.
 
 Ändra till **Post Name**. **Save Changes** och vi ska nu ha oss en go **url**.
 
+**10**
 
+Nu ska vi installera ett nytt tema.
 
+<img src="./assets/17.png" alt="16" style="zoom:35%;" />
 
+Välj det tema du vill ha och tryck **install** därefter **activate**.
+
+Jag valde **Sidney**.
+
+Vi kommer senare i kursen att skapa våra egna teman.
+
+**11**
+
+Börja med att gå in **Pages** och lägg till exempelvis **About Us** och **Contact**.
+
+**Pages**->**Create new**->**Publish**
+
+Vi kan nu se att vi har några pages i vår meny längst upp till höger.
+
+<img src="./assets/18.png" alt="16" style="zoom:35%;" />
+
+Vad vi ser på höger sida är en **widget**
+
+"Widgets are pieces of content that can be added to specific areas of your site, such as the sidebar or footer."
+
+<img src="./assets/19.png" alt="16" style="zoom:35%;" />
+
+Vi kan ändra denna, eller ta bort, så som vi vill ha den.
+
+**13**
+
+En annan viktigt komponent i WordPress är **plugins**.
+
+"Plugins are tools, made by many people and companies in the WordPress community, to add extra features to WordPress. On the WordPress.com Business and eCommerce plans, you can choose from many thousands of plugins to extend the functionality of your site.".
+
+Sök på form och **install now** Contact Form 7. Därefter **activate**.
+
+<img src="./assets/20.png" alt="16" style="zoom:35%;" />
+
+Kopiera **shortcode**
+
+<img src="./assets/21.png" alt="16" style="zoom:35%;" />
+
+Gå in på din **Contact** sida och klistra in koden.
+
+<img src="./assets/22.png" alt="16" style="zoom:35%;" />
+
+Klart.
+
+<img src="./assets/23.png" alt="16" style="zoom:35%;" />
+
+**14**
+
+Advanced Custom Fields
+
+Gå tillbaks till **Plugins** och söker efter "Advanced custom fields".
+
+Installera och aktivera.
+
+<img src="./assets/24.png" alt="16" style="zoom:35%;" />
+
+Börja med att skapa en ny Page **Home** och sätt den som front page**.
+
+<img src="./assets/25.png" alt="16" style="zoom:35%;" />
+
+Välj **Custom fields** från panelen och välj **Add new**.
+
+Här kan vi ge instruktioner till vår kund. Dessa kan även användas när vi senare skapar vårt egna tema. 
+
+Namge gruppen till "Frontpage info" och välj **Add field**.
+
+<img src="./assets/26.png" alt="16" style="zoom:35%;" />
+
+<img src="./assets/29.png" alt="16" style="zoom:35%;" />
 
 
 
