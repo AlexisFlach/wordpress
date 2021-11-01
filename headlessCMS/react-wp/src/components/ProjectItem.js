@@ -5,7 +5,7 @@ import axios from 'axios';
 const ProjectItem = ({project}) => {
 
     const [image, setImage] = useState('');
-    const {githublink} = project.acf
+    
     const {featured_media} = project;
     useEffect(async() => {
      const res = await axios.get(`/wp-json/wp/v2/media/${featured_media}`)
@@ -17,7 +17,7 @@ const ProjectItem = ({project}) => {
             <h2>{project.title.rendered}</h2>
             <div dangerouslySetInnerHTML={{__html: project.excerpt.rendered}}/>
             <img style={{width: '50%'}}src={ image } alt={project.title.rendered} />
-            <a href={githublink} class="button">Go to github</a>
+
             <Link to={`/project/${project.id}`}>Go to page</Link>
             
         </div>

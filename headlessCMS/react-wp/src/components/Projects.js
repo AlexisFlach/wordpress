@@ -9,7 +9,7 @@ const Projects = () => {
     const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    axios.get('/wp-json/wp/v2/projects')
+    axios.get('/wp-json/wp/v2/portfolio')
     .then(res => {
         setProject(res.data)
         setIsLoaded(true)
